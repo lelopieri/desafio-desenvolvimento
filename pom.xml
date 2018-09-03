@@ -11,13 +11,21 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <!--<version.hibernate.validator>4.3.1.Final</version.hibernate.validator>-->
+        <!--<version.hibernate.entitymanager>4.0.1.Final</version.hibernate.entitymanager>-->
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>4.3.10.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
-            <version>5.0.2.Final</version>
+            <version>4.3.10.Final</version>
         </dependency>
         <dependency>
             <groupId>org.apache.tomcat</groupId>

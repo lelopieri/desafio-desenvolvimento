@@ -6,6 +6,8 @@ import javax.ws.rs.Path;
 
 import br.com.cresol.desafio.dto.SimulacaoEmprestimo;
 import br.com.cresol.desafio.dto.SimularEmprestimoPayload;
+import br.com.cresol.desafio.entities.ClienteEntity;
+import br.com.cresol.desafio.persistence.ClienteDAO;
 import br.com.cresol.desafio.service.EmprestimoService;
 import io.swagger.annotations.Api;
 
@@ -26,7 +28,9 @@ public class EmprestimoResource {
 	@GET
 	@Path("/teste")
 	public String teste() {
-		return "Testado";
+		ClienteDAO dao = new ClienteDAO();
+		ClienteEntity entity = dao.getClientes();
+		return entity.getNome();
 	}
 
 }
